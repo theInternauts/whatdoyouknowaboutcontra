@@ -77,7 +77,12 @@
       // This stuff needs to be global
       var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('my_player')
+        player = new YT.Player('my_player', {
+          events: {
+            'onReady': booyah
+          }
+        }
+        // player = new YT.Player('player')
       }
 
       $(function() {
